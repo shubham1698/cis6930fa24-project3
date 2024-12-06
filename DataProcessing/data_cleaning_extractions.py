@@ -1,7 +1,5 @@
 from pypdf import PdfReader
-import csv
 import os
-import requests
 import re
 
 def get_data():
@@ -45,7 +43,7 @@ def extract_pdf_data(pdf_file_path="./tmp/incident_report.pdf"):
                 data_elements = [element.strip() for element in re.split(r"\s{3,}", line.strip())]
 
                 if len(data_elements) > 1 and data_elements[0] and data_elements[0][0].isdigit():
-                    data_elements += [''] * (5 - len(data_elements))  # Pad with empty strings to make it 5 elements
+                    data_elements += [''] * (5 - len(data_elements))  
                     formatted_data.append(tuple(data_elements))
         return formatted_data
     except Exception as e:
