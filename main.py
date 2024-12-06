@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objs as go
+import requests
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
@@ -134,10 +135,8 @@ def main():
             return
         
         df = preprocess_data(data)
-
-
-        st.subheader("Extracted Incident Data")
-        st.dataframe(df)
+        # st.subheader("Extracted Incident Data")
+        # st.dataframe(df)
         
         st.header("Data Visualizations")
         
@@ -152,6 +151,24 @@ def main():
         st.subheader("3. Incident Distribution Over Time")
         pie_fig = most_frequent_detail_pie_chart(df)
         st.plotly_chart(pie_fig)
+
+    st.sidebar.header("Feedback")
+    st.sidebar.write("We value your feedback! Please let us know your thoughts below:")
+    
+    # Feedback Form
+    with st.sidebar.form(key='feedback_form'):
+        name = st.text_input("Your Name (optional)")
+        email = st.text_input("Your Email (optional)")
+        feedback = st.text_area("Your Feedback")
+        submit_button = st.form_submit_button(label='Submit Feedback')
+        
+        if submit_button:
+            if feedback.strip() == "":
+                st.warning("Feedback cannot be empty!")
+            else:
+                # Display popup
+                st.success("Thank you! Your feedback has been recorded.")
+                st.write(f"**Feedback Summary:**\n- **Name**: {name}\n- **Email**: {email}\n- **Feedback**: {feedback}")
 
 if __name__ == "__main__":
     main()

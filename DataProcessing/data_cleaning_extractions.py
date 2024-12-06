@@ -1,7 +1,7 @@
 from pypdf import PdfReader
 import os
 import re
-
+import requests
 def get_data():
     return extract_pdf_data()
     
