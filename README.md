@@ -14,7 +14,7 @@ To install the necessary packages for this project, navigate to the root of the 
 
 1) pipenv run streamlit run main.py
 
-[C:\Users\shubh\Documents\UFProject\DE\cis6930-project0\de_rec_proj_0.mp4](https://github.com/user-attachments/assets/2518c324-3648-41ba-a7c5-5da9d41a31b1)
+[C:\Users\shubh\Documents\UFProject\DE\cis6930-project0\de_rec_proj_0.mp4](https://youtu.be/T7E4OfjpHgM)
 
 # Function Description 
 
