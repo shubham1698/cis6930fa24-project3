@@ -16,7 +16,7 @@ To install the necessary packages for this project, navigate to the root of the 
 
 ## Demo Link
 
-[Project 3 Demo Link](https://youtu.be/T7E4OfjpHgM)
+[![YouTube Demo](https://img.youtube.com/vi/T7E4OfjpHgM/0.jpg)](https://youtu.be/T7E4OfjpHgM)
 
 ## Function Description 
 
